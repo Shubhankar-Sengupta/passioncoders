@@ -44,13 +44,14 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div className="cart absolute right-0 mx-5 top-2">
-        <Link href="/">
-          <a href="">
-            <AiOutlineShoppingCart className="md:text-2xl" />
-          </a>
-        </Link>
+      <div
+        className="cart absolute right-0 mx-5 top-2"
+        style={{ cursor: 'pointer' }}
+      >
+        <AiOutlineShoppingCart className="md:text-2xl" />
       </div>
+
+      <div></div>
     </div>
   );
 };
