@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Slug = () => {
   const [service, setService] = useState(null);
@@ -235,12 +236,12 @@ const Slug = () => {
             </div>
           </div>
         </div>
-        {service && service !== null && (
-          <div className="text-green-500">This pincode is servicable</div>
-        )}
-        {!service && service !== null && (
-          <div className="text-red-500">This pincode is not servicable</div>
-        )}
+        {service &&
+          service !== null &&
+          toast.success('This pincode is servicable')}
+        {!service &&
+          service !== null &&
+          toast.error('This pincode is not servicable')}
       </div>
     </section>
   );
